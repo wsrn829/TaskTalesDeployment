@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+<main>
+    <div>
+        <h1>{{ project.name }}</h1>
+        <p>
+            The first assignment project in my bootcamp.
+        </p>
+        <h2>Tasks</h2>
+        <a href="{% url 'create_task' %}">Create a new task</a>
+        <table>
+            <tr>
+                <thead>
+                    <td>Name</td>
+                    <td>Assignee</td>
+                    <td>Start date</td>
+                    <td>Due date</td>
+                    <td>Is completed</td>
+                </thead>
+                <tbody>
+                    {% for item in project_object.items.all %}
+                    <tr>
+                        <td>{{ item.name }}</td>
+                        <td>{{ item.assignee }}</td>
+                        <td>{{ item.start_date }}</td>
+                        <td>{{ item.due_date }}</td>
+                        <td>{{ item.is_completed }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </tr>
+        </table>
+    </div>
+</main>
+{% endblock content %}

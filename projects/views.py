@@ -14,6 +14,14 @@ def list_projects(request):
     return render(request, "projects/list_projects.html", context)
 
 
+def detail_project(request, id):
+    project = Project.objects.get(id=id)
+    context = {
+        "project_object": project,
+    }
+    return render(request, "projects/detail_project.html", context)
+
+
 @login_required
 def create_project(request):
     if request.method == "POST":
