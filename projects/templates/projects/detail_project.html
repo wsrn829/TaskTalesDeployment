@@ -3,7 +3,7 @@
 {% block content %}
 <main>
     <div>
-        <h1>{{ project.name }}</h1>
+        <h1>{{ project_object.name }}</h1>
         <p>
             The first assignment project in my bootcamp.
         </p>
@@ -19,7 +19,7 @@
                     <td>Is completed</td>
                 </thead>
                 <tbody>
-                    {% for item in project_object.items.all %}
+                    {% for item in project_object.tasks.all %}
                     <tr>
                         <td>{{ item.name }}</td>
                         <td>{{ item.assignee }}</td>

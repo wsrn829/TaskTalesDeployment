@@ -1,10 +1,18 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from projects.models import Project
 from projects.forms import ProjectForm
 
 
 # Create your views here.
+def show_project(request, id):
+    project = get_object_or_404(Project, id=id)
+    context = {
+        "project_object": project,
+    }
+    return render(request, "projects/detail_project.html", context)
+
+
 @login_required
 def list_projects(request):
     projects = Project.objects.filter(owner=request.user)
@@ -12,14 +20,6 @@ def list_projects(request):
         "projects": projects,
     }
     return render(request, "projects/list_projects.html", context)
-
-
-def detail_project(request, id):
-    project = Project.objects.get(id=id)
-    context = {
-        "project_object": project,
-    }
-    return render(request, "projects/detail_project.html", context)
 
 
 @login_required
