@@ -4,8 +4,9 @@ from projects.models import Project
 
 
 # Create your views here.
+@login_required
 def list_projects(request):
-    projects = Project.objects.all()
+    projects = Project.objects.filter(owner=request.user)
     context = {
         "projects": projects,
     }
