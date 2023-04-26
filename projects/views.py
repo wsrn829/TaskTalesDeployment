@@ -5,6 +5,7 @@ from projects.forms import ProjectForm
 
 
 # Create your views here.
+@login_required
 def show_project(request, id):
     project = get_object_or_404(Project, id=id)
     context = {
