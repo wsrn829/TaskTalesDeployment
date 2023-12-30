@@ -2,29 +2,36 @@
 
 -----------------------------
 
-<!-- Clone the Git repository -->
+1. Clone the Git repository:
+   
 git clone <url>
 
-<!-- Install Django -->
+2. Install Django
+   
 pip install Django
 
-<!-- Upgrade pip (optional, but recommended) -->
+3. Upgrade pip (optional, but recommended)
+   
 pip install --upgrade pip
 
-<!-- Create a virtual environment -->
+4. Create a virtual environment
+   
 python -m venv venv
 
-<!-- Activate the virtual environment (on Unix or MacOS) -->
+5. Activate the virtual environment (on Unix or MacOS)
+   
 source venv/bin/activate
 
-<!-- Activate the virtual environment (on Windows) -->
+6. Activate the virtual environment (on Windows)
+   
 .\venv\Scripts\activate
 
-<!-- Run the Django development server -->
+7. Run the Django development server
+   
 python manage.py runserver
 
-<!-- Starting development server at http://127.0.0.1:8000/ -->
+8. Starting development server at http://127.0.0.1:8000/
 
-<!-- Quit the server with CONTROL-C -->
+9. Quit the server with CONTROL-C
 
 
