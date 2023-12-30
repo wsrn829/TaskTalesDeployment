@@ -4,7 +4,7 @@
 
 1. Clone the Git repository:
    
-   git clone <url>
+   git clone 'replace_with_actual_repository_url'
 
 2. Install Django
    
