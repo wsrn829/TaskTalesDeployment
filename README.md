@@ -1,5 +1,12 @@
-# This is a Django application. The following steps and terminal commands guide you through creating a new virtual environment and installing the dependencies for Django and software development.
+# TaskTales
 
+### This is a Django application. 
+
+### The following steps and terminal commands guide you through creating a new virtual environment 
+
+### and installing the dependencies for Django and software development.
+
+------------------------------
 
 1. Clone the Git project repository:
    
