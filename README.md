@@ -1,12 +1,13 @@
 # TaskTales
 
-### This is a Django application. 
-
-The following steps and terminal commands guide you through creating a new virtual environment 
-
-and installing the dependencies for Django and software development.
+This is a Django application implemented with Python, utilizing Django's authentication system and a built-in SQLite database.
+The front-end is developed using HTML and CSS.
 
 ------------------------------
+
+The following steps and terminal commands guide you through creating a new virtual environment 
+and installing the dependencies for Django and software development.
+
 
 1.  Change the directory to the desired location where you want to clone the repository:
 
@@ -80,4 +81,22 @@ and installing the dependencies for Django and software development.
 
     To stop the server, use CONTROL-C. If you need to restart it, use the command mentioned in step 16 above.
 
+------------------------------
+
+This Django application has a Django project named 'tracker', which includes three Django apps named 'accounts', 'projects', and 'tasks'. 
+
+The following is the implementation process. In the repository directory:
+
+1. Create a Django project named tracker so that the manage.py file is in the top directory;
+   
+3. Create a Django app named accounts and install it in the tracker Django project in the INSTALLED_APPS list;
+   
+4. Create a Django app named projects and install it in the tracker Django project in the INSTALLED_APPS list;
+   
+5. Create a Django app named tasks and install it in the tracker Django project in the INSTALLED_APPS list;
+   
+6. Run the migrations;
+    
+7. Create a super user.
+    
 
