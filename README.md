@@ -2,9 +2,9 @@
 
 ### This is a Django application. 
 
-### The following steps and terminal commands guide you through creating a new virtual environment 
+The following steps and terminal commands guide you through creating a new virtual environment 
 
-### and installing the dependencies for Django and software development.
+and installing the dependencies for Django and software development.
 
 ------------------------------
 
