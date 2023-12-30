@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
-
 {% block content %}
+
 <main>
     <div>
         <h1>{{ project_object.name }}</h1>
@@ -8,7 +8,7 @@
             {{ project_object.description }}
         </p>
         <h2>Tasks</h2>
-        <a href="{% url 'create_task' %}">Create a new task</a>
+        {% if project_object.tasks.all %}
         <table>
             <thead>
                 <tr>
@@ -31,9 +31,15 @@
                 {% endfor %}
             </tbody>
         </table>
+        <div>
+            <a href="{% url 'create_task' %}">Create a new task</a>
+        </div>
+
+        {% else %}
         <p>
             This project has no tasks
         </p>
+        {% endif %}
     </div>
 </main>
 {% endblock content %}
