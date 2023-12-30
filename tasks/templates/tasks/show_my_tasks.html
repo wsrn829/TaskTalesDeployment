@@ -4,6 +4,8 @@
 <main>
     <div>
         <h1>My Tasks</h1>
+
+        {% if tasks %}
         <table>
             <thead>
                 <tr>
@@ -24,9 +26,12 @@
                 {% endfor %}
             </tbody>
         </table>
+
+        {% else %}
         <p>
             You have no tasks
         </p>
+        {% endif %}
     </div>
 </main>
 {% endblock content %}
