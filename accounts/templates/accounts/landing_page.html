@@ -1,0 +1,50 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaskTales</title>
+  <link rel="stylesheet" type="text/css" href="{% static '/css/navbar.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static '/css/home.css' %}">
+</head>
+
+<body>
+  <div class="page-wrapper">
+    <div class="section-padding"></div>
+    <div class="ribbon section-padding">
+      <div class="navbar w-nav">
+        <div class="container">
+          <a href="#">
+            <img
+              src="{% static '/images/logo.png' %}"
+              loading="lazy" sizes="(max-width: 479px) 63vw, (max-width: 767px) 38vw, (max-width: 991px) 26vw, 250px"
+              srcset="{% static '/images/logo.png' '500w' %}, {% static '/images/logo.png' '800w' %}, {% static '/logo.png' '1080w'%}, {% static '/images/logo.png' '1600w' %}, {% static '/images/logo.png' '2000w' %}"
+              alt="" class="main-logo" /></a>
+          <nav role="navigation" class="nav-menu w-nav-menu">
+            <a href="{% url 'signup' %}" class="button">Sign Up</a>
+            <a href="{% url 'login' %}" class="button ghost-button">Log in</a>
+          </nav>
+        </div>
+      </div>
+      <div class="container">
+          <div class="content-wrapper">
+            <h1 style="margin-top: 50px; font-size: 60px; text-align: left;">Stay Productive Every Day</h1>
+            <p style="font-size:30px; margin-top: 3px; margin-bottom: 30px; padding-top: 25px; padding-bottom: 30px;">TaskTales: Every Task Has a Story!</p>
+          </div>
+    </div>
+    <div class="cta-section section-padding">
+      <div class="container center">
+        <div class="cta-wrapper">
+          <div class="subheader black">are you ready?</div>
+          <h2 class="cta-h2 center">Join us and optimize your productivity today!</h2>
+          <a href="{% url 'signup' %}" class="button join">Get started</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
