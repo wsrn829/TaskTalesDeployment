@@ -1,4 +1,4 @@
-# TaskTales
+# TaskTales (Solo Project - My First Full Stack App)
 
 This is a Django application implemented with Python, utilizing Django's authentication system and a built-in SQLite database.
 The front-end is developed using HTML and CSS.
