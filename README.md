@@ -41,7 +41,7 @@ Deployment Steps of Django App (On-Going)
 8. Collect Static Files:
    Run the collectstatic management command to gather all static files (including CSS and JavaScript) into a single directory.
 
-python manage.py collectstatic
+   `python manage.py collectstatic`
 
 9. Serve Static Files:
 
