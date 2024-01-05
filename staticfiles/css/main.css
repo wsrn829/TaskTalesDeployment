@@ -1,0 +1,367 @@
+#logo {
+    width: 10vw;
+    min-width: 20px;
+}
+
+body {
+    background-color: #ebeff5;
+    font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+}
+
+
+main {
+    margin: 20px;
+    align-items: center;
+}
+
+
+a {
+    color: #7e7ed5;
+}
+
+a:hover {
+    color: #39cccc;
+}
+
+li>a {
+    color: #ebeff5;
+}
+
+ul {
+    margin-bottom: 0;
+}
+
+
+table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    border-radius: 5px 5px 0 0;
+    table-layout: fixed;
+    width: 100%;
+}
+
+.fixed-table {
+    table-layout: fixed;
+    width: 100%;
+}
+
+thead>tr {
+    background-color: #2d2879;
+    color: #ffffff;
+    text-align: left;
+}
+
+.form-check-input {
+    text-align: center;
+}
+
+th,
+td {
+    padding: 12px 16px;
+    text-align: center;
+}
+
+tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+tbody tr:nth-of-type(even) {
+    background-color: rgba(101, 89, 189, 0.231);
+}
+
+tbody tr:last-of-type {
+    border-bottom: 2px solid #2d2879;
+}
+
+
+.tasks {
+    text-align: left;
+}
+
+form {
+    margin: 0;
+    max-width: 1000px;
+    text-align: start;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+label {
+    width: 100px;
+    text-align: start;
+}
+
+input,
+textarea {
+    width: 400px;
+    height: auto;
+    box-sizing: border-box;
+    border-radius: 3px;
+    border: rgba(0, 0, 0, .3) 2px solid;
+    font-family: sans-serif;
+}
+
+select:focus {
+    outline: none;
+    border: #7e7ed5 2px solid;
+}
+
+input:focus {
+    outline: none;
+    border: #7e7ed5 2px solid;
+}
+
+textarea:focus {
+    outline: none;
+    border: #7e7ed5 2px solid;
+}
+
+button {
+    border: none;
+}
+
+.button.inverse-button {
+    border-radius: 5px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+        7px 7px 20px 0px rgba(0, 0, 0, .1),
+        4px 4px 5px 0px rgba(0, 0, 0, .1);
+    left: 60px;
+    width: 130px;
+    height: 40px;
+}
+
+.button.inverse-button:hover,
+.button.inverse-button:focus {
+    box-shadow: inset 0 0 0 2em var(--hover);
+    color: #f6f1f1;
+    background-color: #2d2879;
+}
+
+div>form>ul>li {
+    width: 300px;
+    color: red;
+    padding-bottom: 10px;
+}
+
+/* accordion */
+.body-project {
+    background-color: #ebeff5;
+}
+
+.accordion-arrow {
+    color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.accordion-buttton {
+    width: 50px;
+    height: 50px;
+    min-height: 50px;
+    min-width: 50px;
+    color: #211f54;
+    transform-style: preserve-3d;
+    background-color: #fff;
+    border: 1px solid #eff0f6;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    text-decoration: none;
+    transition: transform .3s;
+    display: flex;
+    box-shadow: 0 2px 12px rgba(20, 20, 43, .08);
+}
+
+accordion-buttton:hover {
+    background-color: #fff;
+    border-color: #eff0f6;
+    transform: scale3d(.94, .94, 1.01);
+}
+
+.accordion-right {
+    margin-left: 24px;
+    margin-right: 0;
+}
+
+.p-center {
+    margin-bottom: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue, Oxygen, Fira Sans, Droid Sans, sans-serif;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.light-purple-text {
+    color: #6e7191;
+}
+
+p.p-center {
+    color: #6e7191;
+}
+
+.accordion-space {
+    min-height: 16px;
+}
+
+.accordion-body-wrapper {
+    width: 100%;
+    overflow: hidden;
+}
+
+.accordion-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 38px;
+}
+
+.accordion-header {
+    color: #281ca5;
+}
+
+.accordian-header {
+    align-items: center;
+    display: flex;
+}
+
+.accordion-item-wrapper {
+    width: 100%;
+    box-shadow: none;
+    cursor: pointer;
+    background-color: #fff;
+    border: 0 solid #eff0f6;
+    border-bottom-width: 1px;
+    border-radius: 0;
+    justify-content: space-between;
+    margin-bottom: -1px;
+    padding: 0 0 40px;
+    transition: transform .3s;
+    display: flex;
+    overflow: visible;
+}
+
+.accordion-item-wrapper:hover {
+    transform: translate(8px);
+}
+
+#my-accordion .accordion-grid {
+    grid-row-gap: 0px;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr;
+    grid-auto-columns: 1fr;
+    display: grid;
+}
+
+.accordion-card {
+    background-color: #fff;
+    border: 1px solid #eff0f6;
+    border-radius: 24px;
+    padding: 88px 74px;
+    box-shadow: 0 2px 7px rgba(20, 20, 43, .06);
+}
+
+.accordion-wrapper {
+    max-width: 1012px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.container-center {
+    max-width: 574px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media screen and (max-width: 991px) {
+    .body-project {
+        margin-right: 0;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .accordion-space {
+        min-height: 12px;
+    }
+
+    .accordion-title {
+        font-size: 28px;
+    }
+
+    .accordion-item-warapper {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .accordion-item-warapper:hover {
+        transform: translate(6px);
+    }
+
+    .accordian-card {
+        padding: 64px 48px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .accordion-buttton {
+        width: 56px;
+        height: 56px;
+        min-height: 56px;
+        min-width: 56px;
+        font-size: 22px;
+        line-height: 24px;
+    }
+
+    .accordion-right {
+        margin-left: 16px;
+        margin-right: 16px;
+    }
+
+    .accordion-title {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .accordion-item-warapper {
+        padding: 36px 0;
+    }
+
+    .accordian-card {
+        padding: 40px 32px;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .accordion-buttton {
+        width: 44px;
+        height: 44px;
+        min-height: 44px;
+        min-width: 44px;
+    }
+
+    .accordion-right {
+        margin-right: 0;
+    }
+
+    .p-center {
+        font-size: 17px;
+        line-height: 28px;
+    }
+
+    .accordion-title {
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+    .accordian-card {
+        padding: 16px 22px;
+    }
+}
