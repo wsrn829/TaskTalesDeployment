@@ -1,8 +1,8 @@
 # TaskTales (Solo Project - My First Full Stack App)
 
-Deployment Steps of Django App
-
 ---
+
+Deployment Steps of Django App
 
 1. Prepare Your Django App:
 
@@ -64,8 +64,6 @@ Deployment Steps of Django App
 
 This is a Django application implemented with Python, utilizing Django's authentication system and a built-in SQLite database.
 The front-end is developed using HTML and CSS.
-
----
 
 The following steps and terminal commands guide you through creating a new virtual environment
 and installing the dependencies for Django and software development.
