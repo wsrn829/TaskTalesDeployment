@@ -34,29 +34,42 @@ Deployment Steps of Django App (On-Going)
 - Set up a domain for your Django app and configure DNS settings.
 - Implement SSL/TLS for secure communication by obtaining and configuring an SSL certificate from a trusted certificate authority.
 
-7. Automate Deployment with Fabric or Ansible:
+7. Include HTML and CSS Files:
+
+- Ensure that all HTML and CSS files for your frontend are included in the appropriate directories within your Django project.
+
+8. Collect Static Files:
+   Run the collectstatic management command to gather all static files (including CSS and JavaScript) into a single directory.
+
+python manage.py collectstatic
+
+9. Serve Static Files:
+
+- Configure your production web server to serve static files directly or use a dedicated service like Amazon S3 or a CDN for improved performance.
+
+10. Automate Deployment with Fabric or Ansible:
 
 - Streamline the deployment process by creating automation scripts using tools like Fabric or Ansible.
 
-8. Implement Continuous Integration/Continuous Deployment (CI/CD):
+11. Implement Continuous Integration/Continuous Deployment (CI/CD):
 
 - Integrate your Django app with a CI/CD system, such as Jenkins or GitLab CI, to automate testing and deployment processes.
 
-9. Monitor and Scale:
+12. Monitor and Scale:
 
 - Implement monitoring tools to keep track of your Django app's performance and identify potential issues.
 - Configure automatic scaling mechanisms to handle increased traffic efficiently.
 
-10. Backup and Recovery Planning:
+13. Backup and Recovery Planning:
 
 - Implement regular backups of your production database and critical files.
 - Develop a comprehensive recovery plan to quickly restore your Django app in case of any unforeseen issues.
 
-11. Update Environment Variables:
+14. Update Environment Variables:
 
 - Manage sensitive information and configuration settings using environment variables.
 
-12. Documentation:
+15. Documentation:
 
 - Maintain clear and up-to-date documentation for your deployment process, making it easier for future updates or troubleshooting.
 
