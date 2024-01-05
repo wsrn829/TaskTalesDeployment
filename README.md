@@ -2,7 +2,7 @@
 
 ---
 
-Deployment Steps of Django App
+Deployment Steps of Django App (On-going)
 
 1. Prepare Your Django App:
 
