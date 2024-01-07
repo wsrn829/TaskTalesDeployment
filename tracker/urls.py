@@ -16,19 +16,24 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from django.shortcuts import redirect
+from django.shortcuts import redirect, render
 from django.http import HttpResponse
 
 
 def redirect_to_home(request):
     return redirect("home")
 
-def project_root_view(request):
-    return HttpResponse("This is the project root view.")
+# def project_root_view(request):
+#     return HttpResponse("This is the project root view.")
+
+
+# def project_root_view(request):
+#     return render(request, 'tasks/home.html')
+
 
 
 urlpatterns = [
-    # path("", redirect_to_home, name="home"),
+    path("", redirect_to_home, name="home"),
     path("", project_root_view, name="project_root_view"),
     path("admin/", admin.site.urls),
     path("projects/", include("projects.urls")),
