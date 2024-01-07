@@ -21,8 +21,7 @@
 - In above file: `web: gunicorn yourapp.wsgi`
 - Commit your code to a version control system like Git.
 
-14. heroku git:remote -a tasktales
-
-- Push your code to Heroku: `git push heroku master`
-
-14.
+14. `heroku git:remote -a tasktales`
+15. `git add .`
+16. `git commit -am "make it better"`
+17. `git push heroku main`
