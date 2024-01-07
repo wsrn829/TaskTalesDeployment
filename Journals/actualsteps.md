@@ -28,4 +28,5 @@
 18. Update the ALLOWED_HOSTS setting in settings.py to include the domain name or IP address of your deployment server.
 19. `pip install gunicorn`
 20. Be sure to add gunicorn to your requirements.txt file as well.
-21.
+21. Project settings.py debug==False
+22.
