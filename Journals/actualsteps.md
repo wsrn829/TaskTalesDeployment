@@ -25,3 +25,7 @@
 15. `git add .`
 16. `git commit -am "make it better"`
 17. `git push heroku main`
+18. Update the ALLOWED_HOSTS setting in settings.py to include the domain name or IP address of your deployment server.
+19. `pip install gunicorn`
+20. Be sure to add gunicorn to your requirements.txt file as well.
+21.

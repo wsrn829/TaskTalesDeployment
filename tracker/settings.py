@@ -27,7 +27,9 @@ SECRET_KEY = (
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "https://tasktales-e12d965b0fbc.herokuapp.com/",
+]
 
 
 # Application definition
