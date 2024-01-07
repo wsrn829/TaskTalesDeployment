@@ -28,7 +28,9 @@ SECRET_KEY = (
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    "https://tasktales-e12d965b0fbc.herokuapp.com/",
+    "tasktales-e12d965b0fbc.herokuapp.com",
+    "127.0.0.1",
+    # Add any other valid hostnames or IP addresses as needed
 ]
 
 
