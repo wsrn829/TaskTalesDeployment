@@ -13,6 +13,12 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 import os
 from pathlib import Path
 from decouple import config
+import django_heroku
+
+# ...
+
+# Activate Django-Heroku.
+django_heroku.settings(locals())
 
 
 
