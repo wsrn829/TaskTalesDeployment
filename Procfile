@@ -1,1 +1,1 @@
-web: gunicorn tasktales.wsgi
+web: gunicorn TaskTalesDeployment.wsgi
