@@ -5,7 +5,8 @@ colorama==0.4.6
 Django==4.2
 Gunicorn==21.2.0
 sqlparse==0.4.4
-PyYAML
+PyYAML==5.4.1
+
 
 
 
