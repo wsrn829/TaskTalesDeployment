@@ -27,7 +27,7 @@ def redirect_to_home(request):
 #     return HttpResponse("This is the project root view.")
 
 def project_root_view(request):
-    return render(request, 'tasks/home.html')
+    return render(request, 'accounts/landing_page.html')
 
 
 urlpatterns = [
