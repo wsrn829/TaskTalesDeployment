@@ -1,3 +1,4 @@
-web: gunicorn -c gunicorn.conf.py TaskTalesDeployment.wsgi:application
+web: gunicorn tracker.wsgi:application -c gunicorn.conf.py
+
 
 
