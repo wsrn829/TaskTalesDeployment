@@ -6,7 +6,7 @@ Django==4.2
 djlint==1.24.0
 EditorConfig==0.12.3
 flake8==6.0.0
-gunicorn==20.1.0
+gunicorn
 html-tag-names==0.1.2
 html-void-elements==0.1.0
 jsbeautifier==1.14.7
@@ -17,12 +17,12 @@ pathspec==0.11.1
 platformdirs==3.2.0
 pycodestyle==2.10.0
 pyflakes==3.0.1
-PyYAML==5.3.1  # Downgraded version
+PyYAML==5.3.1
 regex==2023.3.23
 six==1.16.0
-Gunicorn==21.2.0
 sqlparse==0.4.4
 tomli==2.0.1
+
 
 
 
