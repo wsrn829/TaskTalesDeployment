@@ -23,13 +23,11 @@ from django.http import HttpResponse
 def redirect_to_home(request):
     return redirect("home")
 
-def project_root_view(request):
-    return HttpResponse("This is the project root view.")
-
-
 # def project_root_view(request):
-#     return render(request, 'tasks/home.html')
+#     return HttpResponse("This is the project root view.")
 
+def project_root_view(request):
+    return render(request, 'tasks/home.html')
 
 
 urlpatterns = [
