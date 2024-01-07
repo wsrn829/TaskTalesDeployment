@@ -13,9 +13,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 import os
 from pathlib import Path
 from decouple import config
-from decouple import config
 
-config.read_env()
 
 
 
@@ -30,6 +28,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = config('SECRET_KEY')
 DEBUG = config('DEBUG', default=False, cast=bool)
+# DATABASE_URL = config('DATABASE_URL')
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
