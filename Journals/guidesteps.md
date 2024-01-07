@@ -1,4 +1,4 @@
-## Here are the steps to deploy your Django app, tasktales, from a cloned GitHub repository in VS Code:
+## Here are the steps to deploy your Django app, TaskTales, from a cloned GitHub repository in VS Code:
 
 1. Prepare your app for deployment:
 
