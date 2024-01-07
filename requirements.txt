@@ -17,12 +17,12 @@ pathspec==0.11.1
 platformdirs==3.2.0
 pycodestyle==2.10.0
 pyflakes==3.0.1
-PyYAML==6.0
+PyYAML==5.4.1
 regex==2023.3.23
 six==1.16.0
 Gunicorn==21.2.0
 sqlparse==0.4.4
-PyYAML==5.4.1
+tomli==2.0.1
 
 
 
@@ -42,6 +42,3 @@ PyYAML==5.4.1
 # pyflakes==3.0.1
 # regex==2023.3.23
 # tqdm==4.65.0
-platformdirs==3.2.0
-six==1.16.0
-tomli==2.0.1
