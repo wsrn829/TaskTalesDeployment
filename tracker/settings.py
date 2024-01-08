@@ -9,6 +9,9 @@ https://docs.djangoproject.com/en/4.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
+from dotenv import load_dotenv
+
+load_dotenv()
 
 import os
 from pathlib import Path
@@ -33,7 +36,7 @@ DATABASE_URL = config('DATABASE_URL')
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
     "tasktales-e12d965b0fbc.herokuapp.com",
