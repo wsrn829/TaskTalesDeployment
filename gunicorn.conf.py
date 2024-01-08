@@ -16,12 +16,15 @@ class FaviconMiddleware:
                 current_dir = os.path.dirname(__file__)
                 favicon_path = os.path.join(current_dir, self.default_favicon_path)
 
+                print(f"Attempting to read favicon from: {favicon_path}")
+
                 with open(favicon_path, 'rb') as f:
                     favicon_data = f.read()
 
                 start_response('200 OK', [('Content-Type', 'image/x-icon')])
                 return [favicon_data]
             except FileNotFoundError:
+                print("Favicon file not found.")
                 start_response('404 Not Found', [('Content-Type', 'text/plain')])
                 return [b'Not Found']
 
