@@ -18,6 +18,9 @@ from pathlib import Path
 from decouple import config
 import dj_database_url
 import django_heroku
+# Make sure you have this import
+from whitenoise.middleware import WhiteNoiseMiddleware
+
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -41,7 +44,6 @@ DEBUG = False
 ALLOWED_HOSTS = [
     "tasktales-e12d965b0fbc.herokuapp.com",
     "127.0.0.1",
-    # Add any other valid hostnames or IP addresses as needed
 ]
 
 
@@ -57,6 +59,8 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "whitenoise.runserver_nostatic",
+
 ]
 
 MIDDLEWARE = [
@@ -145,6 +149,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = "/static/"
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 STATICFILES_DIRS =[os.path.join(BASE_DIR, 'static')]
 # [
@@ -154,7 +159,6 @@ STATICFILES_DIRS =[os.path.join(BASE_DIR, 'static')]
 # ]
 # STATIC_ROOT = BASE_DIR / "staticfiles"
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 MEDIA_URL = "/media/"
 # MEDIA_ROOT = BASE_DIR / "media"
