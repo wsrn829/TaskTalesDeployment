@@ -1,6 +1,8 @@
 import sys
 import os
 from tracker.wsgi import application
+from whitenoise import WhiteNoise
+
 
 bind = "0.0.0.0:" + os.environ.get("PORT", "8000")
 workers = 3
@@ -33,3 +35,5 @@ class FaviconMiddleware:
 
 # Wrap the main application with FaviconMiddleware
 application = FaviconMiddleware(application)
+application = WhiteNoise(application)
+
