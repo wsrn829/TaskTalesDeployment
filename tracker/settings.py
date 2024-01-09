@@ -41,7 +41,7 @@ DATABASE_URL = config('DATABASE_URL')
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
     "tasktales-e12d965b0fbc.herokuapp.com",
