@@ -20,8 +20,10 @@ staticfiles_storage = CompressedManifestStaticFilesStorage(location=manifest_pat
 print(staticfiles_storage.manifest)
 
 
+DEBUG = True
+
+
 SECRET_KEY = config('SECRET_KEY')
-DEBUG = False
 DATABASE_URL = config('DATABASE_URL')
 
 
