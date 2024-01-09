@@ -22,5 +22,5 @@ wheel==0.42.0
 whitenoise==6.6.0
 
 python-dotenv==1.0.0
-Django==5.0.1 
+django==5.0.1 
 asgiref==3.7.2
