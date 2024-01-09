@@ -28,6 +28,7 @@ from whitenoise.middleware import WhiteNoiseMiddleware
 # BASE_DIR = Path(__file__).resolve().parent.parent
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+print(whitenoise.storage.CompressedManifestStaticFilesStorage.manifest)
 
 
 # Quick-start development settings - unsuitable for production
