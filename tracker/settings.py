@@ -15,7 +15,9 @@ from whitenoise.middleware import WhiteNoiseMiddleware
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-print(whitenoise.storage.CompressedManifestStaticFilesStorage.manifest)
+from whitenoise.storage import CompressedManifestStaticFilesStorage
+
+print(CompressedManifestStaticFilesStorage.manifest)
 
 
 SECRET_KEY = config('SECRET_KEY')
