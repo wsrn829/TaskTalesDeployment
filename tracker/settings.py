@@ -9,6 +9,8 @@ import dj_database_url
 import django_heroku
 from whitenoise.middleware import WhiteNoiseMiddleware
 from whitenoise.storage import CompressedManifestStaticFilesStorage
+from django.contrib.staticfiles.storage import ManifestStaticFilesStorage
+
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -19,7 +21,7 @@ print(staticfiles_storage.manifest)
 
 
 SECRET_KEY = config('SECRET_KEY')
-DEBUG = config('DEBUG', default=False, cast=bool)
+DEBUG = False
 DATABASE_URL = config('DATABASE_URL')
 
 
