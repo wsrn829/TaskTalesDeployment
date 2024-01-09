@@ -2,22 +2,20 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-
-import whitenoise
 import os
 from pathlib import Path
 from decouple import config
 import dj_database_url
 import django_heroku
 from whitenoise.middleware import WhiteNoiseMiddleware
-
-
+from whitenoise.storage import CompressedManifestStaticFilesStorage
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-from whitenoise.storage import CompressedManifestStaticFilesStorage
+manifest_path = os.path.join(BASE_DIR, 'staticfiles', 'manifest.json')
+staticfiles_storage = CompressedManifestStaticFilesStorage(location=manifest_path)
 
-print(CompressedManifestStaticFilesStorage.manifest)
+print(staticfiles_storage.manifest)
 
 
 SECRET_KEY = config('SECRET_KEY')
@@ -43,7 +41,6 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "whitenoise.runserver_nostatic",
-
 ]
 
 MIDDLEWARE = [
@@ -58,6 +55,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = "tracker.urls"
+
 
 TEMPLATES = [
     {
@@ -79,7 +77,7 @@ WSGI_APPLICATION = "tracker.wsgi.application"
 
 
 DATABASES = {
-    'default': dj_database_url.config(default=config('DATABASE_URL', default='sqlite:///:memory:'))
+    'default': dj_database_url.config(default=config('DATABASE_URL'))
 }
 
 
@@ -113,6 +111,7 @@ USE_TZ = True
 
 STATIC_URL = "/static/"
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
