@@ -1,7 +1,7 @@
 import sys
 import os
 from tracker.wsgi import application
-from whitenoise import WhiteNoise
+# from whitenoise import WhiteNoise
 
 
 bind = "0.0.0.0:" + os.environ.get("PORT", "8000")
@@ -9,7 +9,7 @@ workers = 3
 # reload = True
 
 
-application = WhiteNoise(application)
+# application = WhiteNoise(application)
 application.add_files('static/', prefix='static/')
 application.add_files('staticfiles/', prefix='staticfiles/')
 
