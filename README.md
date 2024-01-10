@@ -1,5 +1,9 @@
 # TaskTales (Solo Project - My First Full Stack App)
 
+----------
+
+My First Independently Deployed Django App on Heroku: *https://tasktales-e12d965b0fbc.herokuapp.com/*
+
 ---
 
 Deployment Steps of Django App (On-Going)
