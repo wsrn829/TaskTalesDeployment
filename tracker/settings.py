@@ -7,8 +7,8 @@ from pathlib import Path
 from decouple import config
 import dj_database_url
 import django_heroku
-from whitenoise.middleware import WhiteNoiseMiddleware
-from whitenoise.storage import CompressedManifestStaticFilesStorage
+# from whitenoise.middleware import WhiteNoiseMiddleware
+# from whitenoise.storage import CompressedManifestStaticFilesStorage
 
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -16,17 +16,18 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
 MEDIA_URL = "/media/"
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
-manifest_path = os.path.join(BASE_DIR, 'staticfiles', 'manifest.json')
-staticfiles_storage = CompressedManifestStaticFilesStorage(location=manifest_path)
+# manifest_path = os.path.join(BASE_DIR, 'staticfiles', 'manifest.json')
+# staticfiles_storage = CompressedManifestStaticFilesStorage(location=manifest_path)
 
-print(staticfiles_storage.manifest)
+# print(staticfiles_storage.manifest)
 
 
 DEBUG = True
@@ -54,11 +55,11 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "whitenoise.runserver_nostatic",
+    # "whitenoise.runserver_nostatic",
 ]
 
 MIDDLEWARE = [
-    'whitenoise.middleware.WhiteNoiseMiddleware',
+    # 'whitenoise.middleware.WhiteNoiseMiddleware',
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
