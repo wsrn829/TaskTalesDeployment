@@ -28,9 +28,10 @@ DATABASE_URL = config('DATABASE_URL')
 
 
 ALLOWED_HOSTS = [
-    "tasktales-e12d965b0fbc.herokuapp.com",
-    "127.0.0.1",
+      '*',
 ]
+#     "tasktales-e12d965b0fbc.herokuapp.com",
+#     "127.0.0.1",
 
 
 
