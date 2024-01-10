@@ -1,6 +1,6 @@
-import sys
+# import sys
 import os
-from tracker.wsgi import application
+# from tracker.wsgi import application
 # from whitenoise import WhiteNoise
 
 
@@ -10,8 +10,8 @@ workers = 3
 
 
 # application = WhiteNoise(application)
-application.add_files('static/', prefix='static/')
-application.add_files('staticfiles/', prefix='staticfiles/')
+# application.add_files('static/', prefix='static/')
+# application.add_files('staticfiles/', prefix='staticfiles/')
 
 
 
