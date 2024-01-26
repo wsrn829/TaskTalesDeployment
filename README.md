@@ -4,6 +4,14 @@
 
 My First Independently Deployed Django App on Heroku: *https://tasktales-e12d965b0fbc.herokuapp.com/*
 
+Full-stack project and task management application to enhance productivity and collaboration across teams
+* Implemented a Django authentication system, reinforcing robust password validation on the signup form and
+enforcing restricted access exclusively for logged-in users to enhance user account security
+* Designed a responsive interface using HTML and CSS, improving cross-device compatibility, readability, and
+strategically guiding user attention through effective design principles
+* Developed and maintained a robust CI/CD pipeline, optimizing software development processes for efficient code
+integration, automated testing, and seamless deployment on Heroku
+
 ---
 
 Deployment Steps of Django App (On-Going)
