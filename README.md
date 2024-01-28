@@ -1,20 +1,22 @@
 # TaskTales (Solo Project - My First Full Stack App)
 
+
+This is a full-stack project and task management application to enhance productivity and collaboration across teams.
+
+This is also my first independently deployed App on Heroku: https://tasktales-e12d965b0fbc.herokuapp.com
+
+------
+
+- Implemented a Django authentication system with robust password validation on the signup form and exclusive
+restricted access for logged-in users to enhance user account security
+- Developed a responsive interface using HTML and CSS to enhance cross-device compatibility, readability, and
+strategically direct user attention through the application of effective design principles
+- Developed and maintained a robust CI/CD pipeline, optimizing software development processes for efficient code
+integration, automated testing, and smooth deployment on Heroku
+
 ---
 
-My First Independently Deployed Django App on Heroku: *https://tasktales-e12d965b0fbc.herokuapp.com/*
-
-Full-stack project and task management application to enhance productivity and collaboration across teams
-* Implemented a Django authentication system, reinforcing robust password validation on the signup form and
-enforcing restricted access exclusively for logged-in users to enhance user account security
-* Designed a responsive interface using HTML and CSS, improving cross-device compatibility, readability, and
-strategically guiding user attention through effective design principles
-* Developed and maintained a robust CI/CD pipeline, optimizing software development processes for efficient code
-integration, automated testing, and seamless deployment on Heroku
-
----
-
-Deployment Steps of Django App (On-Going)
+General Deployment Steps of Django App
 
 1. Prepare Your Django App:
 
@@ -30,10 +32,10 @@ Deployment Steps of Django App (On-Going)
 
 - Update the Django SECRET_KEY for security reasons.
 - Disable the debug mode in your Django settings for production environments.
-- Choose a Web Server:
 
-4. Select a web server such as Nginx or Apache to serve your Django application.
+4. Choose a Web Server:
 
+- Select a web server such as Nginx or Apache to serve your Django application.
 - Configure the web server to forward requests to the Gunicorn or uWSGI application server.
 
 5. Set Up Gunicorn or uWSGI:
@@ -159,9 +161,10 @@ and installing the dependencies for Django and software development.
 
 17. Starting the Development Server:
 
-    The development server has been initiated, and you can access your application at http://127.0.0.1:8000/.
+    The development server has been initiated, and you can access your application at:
+     http://127.0.0.1:8000 or http://localhost:8000
 
-18. Quitting the Server:
+19. Quitting the Server:
 
     To stop the server, use CONTROL-C. If you need to restart it, use the command mentioned in step 16 above.
 
