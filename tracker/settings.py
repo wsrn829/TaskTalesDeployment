@@ -7,11 +7,12 @@ from pathlib import Path
 from decouple import config
 import dj_database_url
 import django_heroku
-# from whitenoise.middleware import WhiteNoiseMiddleware
-# from whitenoise.storage import CompressedManifestStaticFilesStorage
+from whitenoise.middleware import WhiteNoiseMiddleware
+from whitenoise.storage import CompressedManifestStaticFilesStorage
 
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
@@ -29,8 +30,42 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # print(staticfiles_storage.manifest)
 
+# Get the environment mode, default to 'development' if not provided
+ENV_ROLE = os.getenv('DJANGO_ENV', 'development')
 
-DEBUG = True
+if ENV_ROLE == 'production':
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': config('DATABASE_NAME'),
+            'USER': config('DATABASE_USER'),
+            'PASSWORD': config('DATABASE_PASSWORD'),
+            'HOST': config('DATABASE_HOST'),
+            'PORT': config('DATABASE_PORT'),
+        }
+    }
+else:  # For 'development' or any other value
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }
+# DEBUG = True
+
+# DEBUG = config('DEBUG', default=False, cast=bool)
+
+# if DEBUG:
+#     DATABASES = {
+#         'default': {
+#             'ENGINE': 'django.db.backends.sqlite3',
+#             'NAME': BASE_DIR / 'db.sqlite3',
+#         }
+#     }
+# else:
+#     DATABASES = {
+#         'default': dj_database_url.config(default=config('DATABASE_URL'))
+#     }
 
 
 SECRET_KEY = config('SECRET_KEY')
@@ -40,7 +75,7 @@ DATABASE_URL = config('DATABASE_URL')
 ALLOWED_HOSTS = [
     "tasktales-e12d965b0fbc.herokuapp.com",
     "127.0.0.1",
-    # '*',
+    "localhost",
 ]
 
 
@@ -59,7 +94,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    # 'whitenoise.middleware.WhiteNoiseMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
@@ -68,6 +103,7 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 ROOT_URLCONF = "tracker.urls"
 
@@ -91,9 +127,9 @@ TEMPLATES = [
 WSGI_APPLICATION = "tracker.wsgi.application"
 
 
-DATABASES = {
-    'default': dj_database_url.config(default=config('DATABASE_URL'))
-}
+# DATABASES = {
+#     'default': dj_database_url.config(default=config('DATABASE_URL'))
+# }
 
 
 AUTH_PASSWORD_VALIDATORS = [
