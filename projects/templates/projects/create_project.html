@@ -1,14 +1,12 @@
 {% extends "base.html" %}
 
 {% block content %}
-<main>
-    <div>
-        <h1>Create a new project</h1>
+    <div class="container">
+        <h1 class="text-dark">Create a Project</h1>
         <form method="post">
             {% csrf_token %}
             {{ form.as_p }}
-            <button>Create</button>
+            <button class="btn btn-info">Create a Project</button>            
         </form>
     </div>
-</main>
 {% endblock content %}

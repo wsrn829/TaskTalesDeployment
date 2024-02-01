@@ -1,13 +1,17 @@
 {% extends 'base.html' %}
-{% block content %}
 
-<main>
-    <div>
-        <h1>{{ project_object.name }}</h1>
-        <p>
+{% block content %}
+    <div class="container">
+        <div class="container-center">
+            <div class="text-center">
+                <div class="text-cemter-top">
+                    <div class="accordion-header">
+        <h1 class="text-dark">{{ project_object.name }}</h1>
+        
+        <p class="p-center text-dark">
             {{ project_object.description }}
         </p>
-        <h2>Tasks</h2>
+        <h2 class="text-dark">Tasks</h2>
         {% if project_object.tasks.all %}
         <table>
             <thead>
@@ -32,7 +36,9 @@
             </tbody>
         </table>
         <div>
-            <a href="{% url 'create_task' %}">Create a new task</a>
+            <a href="{% url 'create_task' %}">
+                <button class="btn btn-info">Create a Task</button>            
+            </a>
         </div>
 
         {% else %}
@@ -40,9 +46,13 @@
             This project has no tasks
         </p>
         <div>
-            <a href="{% url 'create_task' %}">Create a new task</a>
+            <a href="{% url 'create_task' %}">
+                <button class="btn btn-info">Create a Task</button>            
+            </a>
         </div>
         {% endif %}
     </div>
-</main>
+    </div>
+    </div>
+    </div>
 {% endblock content %}

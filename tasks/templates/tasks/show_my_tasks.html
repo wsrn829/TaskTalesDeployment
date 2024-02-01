@@ -1,9 +1,8 @@
 {% extends "base.html" %}
 
 {% block content %}
-<main>
-    <div>
-        <h1>My Tasks</h1>
+    <div class="container">
+        <h1 class="text-dark">My Tasks</h1>
 
         {% if tasks %}
         <table>
@@ -27,7 +26,9 @@
             </tbody>
         </table>
         <div>
-            <a href="{% url 'create_task' %}">Create a new task</a>
+            <a href="{% url 'create_task' %}">
+                <button class="btn btn-info">Create a Task</button>            
+            </a>
         </div>
 
         {% else %}
@@ -35,9 +36,10 @@
             You have no tasks
         </p>
         <div>
-            <a href="{% url 'create_task' %}">Create a new task</a>
+            <a href="{% url 'create_task' %}">
+                <button class="btn btn-info">Create a Task</button>            
+            </a>
         </div>
         {% endif %}
     </div>
-</main>
 {% endblock content %}

@@ -1,9 +1,8 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<main>
-    <div>
-        <h1>My Projects</h1>
+    <div class="container">
+        <h1 class="text-dark">My Projects</h1>
         
         {% if projects %}
         <table>
@@ -17,7 +16,7 @@
                 {% for project in projects %}
                 <tr>
                     <td>
-                        <a href="{% url 'show_project' project.id %}">{{ project.name }}</a>
+                        <a class="text-dark" href="{% url 'show_project' project.id %}">{{ project.name }}</a>
                     </td>
                     <td>{{ project.tasks.all|length }}</td>
                 </tr>
@@ -26,9 +25,9 @@
         </table>
 
         <div>
-            <p>
-                <a href="{% url 'create_project' %}">Create a new project</a>
-            </p>
+            <a href="{% url 'create_project' %}">
+                <button class="btn btn-info">Create a Project</button>            
+            </a>
         </div>
 
         {% else %}
@@ -37,5 +36,4 @@
         </p>
         {% endif %}
     </div>
-</main>
 {% endblock content %}

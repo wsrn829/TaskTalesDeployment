@@ -7,8 +7,8 @@ from pathlib import Path
 from decouple import config
 import dj_database_url
 import django_heroku
-from whitenoise.middleware import WhiteNoiseMiddleware
-from whitenoise.storage import CompressedManifestStaticFilesStorage
+# from whitenoise.middleware import WhiteNoiseMiddleware
+# from whitenoise.storage import CompressedManifestStaticFilesStorage
 
 
 # BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -51,7 +51,8 @@ else:  # For 'development' or any other value
             'NAME': BASE_DIR / 'db.sqlite3',
         }
     }
-# DEBUG = True
+    
+DEBUG = False
 
 # DEBUG = config('DEBUG', default=False, cast=bool)
 
@@ -75,6 +76,8 @@ DATABASE_URL = config('DATABASE_URL')
 ALLOWED_HOSTS = [
     "tasktales-e12d965b0fbc.herokuapp.com",
     "127.0.0.1",
+    "127.0.0.1:8000/",
+    "localhost:8000",
     "localhost",
 ]
 
@@ -94,7 +97,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    'whitenoise.middleware.WhiteNoiseMiddleware',
+    # 'whitenoise.middleware.WhiteNoiseMiddleware',
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
@@ -103,7 +106,10 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+# STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
+
 
 ROOT_URLCONF = "tracker.urls"
 
