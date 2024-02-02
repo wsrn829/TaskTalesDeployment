@@ -282,6 +282,16 @@ p.p-center {
 }
 
 @media screen and (max-width: 991px) {
+    input,
+    textarea {
+    width: 300px;
+    height: auto;
+    box-sizing: border-box;
+    border-radius: 3px;
+    border: rgba(0, 0, 0, .3) 2px solid;
+    font-family: sans-serif;
+}
+
     .body-project {
         margin-right: 0;
         padding-left: 15px;
@@ -311,6 +321,15 @@ p.p-center {
 }
 
 @media screen and (max-width: 767px) {
+    input,
+    textarea {
+    width: 300px;
+    height: auto;
+    box-sizing: border-box;
+    border-radius: 3px;
+    border: rgba(0, 0, 0, .3) 2px solid;
+    font-family: sans-serif;
+}
     .accordion-buttton {
         width: 56px;
         height: 56px;
